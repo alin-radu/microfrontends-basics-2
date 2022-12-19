@@ -1,9 +1,6 @@
 // marketing
 
-// merge, used to merge multiple config objects into one;
 const { merge } = require('webpack-merge');
-
-// HtmlWebpackPlugin, will a html file and inject some js scripts inside it;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
