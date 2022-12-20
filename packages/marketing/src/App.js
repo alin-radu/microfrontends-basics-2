@@ -1,5 +1,7 @@
+// marketing
+
 import React from 'react';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 
 import { StylesProvider, createGenerateClassName } from '@material-ui/styles';
 
@@ -10,8 +12,8 @@ const generateClassName = createGenerateClassName({
   productionPrefix: 'ma',
 });
 
-const App = () => (
-  <BrowserRouter>
+const App = ({ history }) => (
+  <Router history={history}>
     <StylesProvider generateClassName={generateClassName}>
       <div>
         <Switch>
@@ -20,6 +22,6 @@ const App = () => (
         </Switch>
       </div>
     </StylesProvider>
-  </BrowserRouter>
+  </Router>
 );
 export default App;
