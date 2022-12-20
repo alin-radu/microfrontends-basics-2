@@ -12,17 +12,14 @@ const generateClassName = createGenerateClassName({
   productionPrefix: 'co',
 });
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <StylesProvider generateClassName={generateClassName}>
-        <div>
-          <Header />
-          <MarketingApp />
-        </div>
-      </StylesProvider>
-    </BrowserRouter>
-  );
-};
-
+const App = () => (
+  <BrowserRouter>
+    <StylesProvider generateClassName={generateClassName}>
+      <div>
+        <Header />
+        <MarketingApp />
+      </div>
+    </StylesProvider>
+  </BrowserRouter>
+);
 export default App;
