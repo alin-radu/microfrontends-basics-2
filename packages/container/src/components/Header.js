@@ -55,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header({ isSignedIn, onSignOut }) {
-  console.log('%c-> developmentConsole: isSignedIn= ', 'color:#77dcfd', isSignedIn);
   const classes = useStyles();
 
   const onClick = () => {
