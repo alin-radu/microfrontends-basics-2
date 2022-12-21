@@ -59,11 +59,7 @@ export default function SignUp({ onSignIn }) {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className={classes.form}
-          noValidate
-        >
+        <form onSubmit={(e) => e.preventDefault()} className={classes.form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -128,7 +124,7 @@ export default function SignUp({ onSignIn }) {
           >
             Sign Up
           </Button>
-          <Grid container justify="flex-end">
+          <Grid container justifyContent="flex-end">
             <Grid item>
               <Link to="/auth/signin">Already have an account? Sign in</Link>
             </Grid>
