@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header({ isSignedIn, onSignOut }) {
+  console.log('%c-> developmentConsole: isSignedIn= ', 'color:#77dcfd', isSignedIn);
   const classes = useStyles();
 
   const onClick = () => {
@@ -70,20 +71,6 @@ export default function Header({ isSignedIn, onSignOut }) {
           <Typography variant="h6" color="inherit" noWrap component={RouterLink} to="/">
             App
           </Typography>
-
-          {isSignedIn && (
-            <Button
-              color="primary"
-              variant="outlined"
-              className={classes.link}
-              component={RouterLink}
-              to={isSignedIn ? '/' : '/auth/signin'}
-              onClick={onClick}
-            >
-              Dashboard
-            </Button>
-          )}
-
           <Button
             color="primary"
             variant="outlined"
